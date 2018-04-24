@@ -50,13 +50,43 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Save Ctrl-->
         <scene sceneID="eOW-ow-VZr">
             <objects>
-                <viewController id="5e1-8S-opH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SaveCtrl" id="5e1-8S-opH" customClass="SaveCtrl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YSz-4x-HHM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQZ-Aw-V0p">
+                                <rect key="frame" x="242" y="10" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="运动">
+                                    <color key="titleColor" red="1" green="0.1492062606" blue="0.12415970430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="animation:" destination="5e1-8S-opH" eventType="touchUpInside" id="XDG-gQ-rjg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-Ul-75e">
+                                <rect key="frame" x="298" y="10" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取值">
+                                    <color key="titleColor" red="1" green="0.1492062606" blue="0.12415970430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mackGif:" destination="5e1-8S-opH" eventType="touchUpInside" id="7GN-Kp-hOk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP5-RL-Qug">
+                                <rect key="frame" x="273" y="48" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="生成"/>
+                                <connections>
+                                    <action selector="mack:" destination="5e1-8S-opH" eventType="touchUpInside" id="NkM-Ml-fWl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="p95-zc-foI"/>
                     </view>

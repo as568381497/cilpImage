@@ -54,7 +54,6 @@
         [self.path setLineWidth:self.lineWidth];
         
         [self.path moveToPoint:currentPoint];
-        NSLog(@"起点%f--%f",currentPoint.x,currentPoint.y);
         self.path.beganPoint = currentPoint;
         self.previousPoint = self.firstPoint =  currentPoint;
         
@@ -64,7 +63,7 @@
         [self.path addQuadCurveToPoint:midPoint controlPoint:self.previousPoint];
         self.previousPoint = currentPoint;
         [self setNeedsDisplay];
-         NSLog(@"线%f--%f",currentPoint.x,currentPoint.y);
+        
     }
     
     else if (gesture.state == UIGestureRecognizerStateEnded)

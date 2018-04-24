@@ -13,6 +13,9 @@
 		458C87F320897FB30037178B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458C87F220897FB30037178B /* Assets.xcassets */; };
 		458C87F620897FB30037178B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458C87F420897FB30037178B /* LaunchScreen.storyboard */; };
 		458C87F920897FB30037178B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 458C87F820897FB30037178B /* main.m */; };
+		459B2183208ED7D40069A00E /* SaveCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 459B2182208ED7D40069A00E /* SaveCtrl.m */; };
+		459EC606208F224200F588FC /* GifUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 459EC605208F224200F588FC /* GifUtils.m */; };
+		459EC609208F231400F588FC /* NSGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 459EC607208F231400F588FC /* NSGIF.m */; };
 		45EB6B132089C71C002BA5F1 /* MyBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EB6B102089C71C002BA5F1 /* MyBezierPath.m */; };
 		45EB6B142089C71C002BA5F1 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EB6B122089C71C002BA5F1 /* DrawView.m */; };
 		45EB6B172089FCBF002BA5F1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45EB6B162089FCBE002BA5F1 /* CoreImage.framework */; };
@@ -29,6 +32,12 @@
 		458C87F520897FB30037178B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458C87F720897FB30037178B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		458C87F820897FB30037178B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		459B2181208ED7D40069A00E /* SaveCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveCtrl.h; sourceTree = "<group>"; };
+		459B2182208ED7D40069A00E /* SaveCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveCtrl.m; sourceTree = "<group>"; };
+		459EC604208F224200F588FC /* GifUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifUtils.h; sourceTree = "<group>"; };
+		459EC605208F224200F588FC /* GifUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifUtils.m; sourceTree = "<group>"; };
+		459EC607208F231400F588FC /* NSGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGIF.m; sourceTree = "<group>"; };
+		459EC608208F231400F588FC /* NSGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGIF.h; sourceTree = "<group>"; };
 		45EB6B0F2089C71C002BA5F1 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		45EB6B102089C71C002BA5F1 /* MyBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBezierPath.m; sourceTree = "<group>"; };
 		45EB6B112089C71C002BA5F1 /* MyBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBezierPath.h; sourceTree = "<group>"; };
@@ -68,6 +77,10 @@
 		458C87E820897FB20037178B /* ClipImage */ = {
 			isa = PBXGroup;
 			children = (
+				459EC608208F231400F588FC /* NSGIF.h */,
+				459EC607208F231400F588FC /* NSGIF.m */,
+				459EC604208F224200F588FC /* GifUtils.h */,
+				459EC605208F224200F588FC /* GifUtils.m */,
 				45EB6B0F2089C71C002BA5F1 /* DrawView.h */,
 				45EB6B122089C71C002BA5F1 /* DrawView.m */,
 				45EB6B112089C71C002BA5F1 /* MyBezierPath.h */,
@@ -76,6 +89,8 @@
 				458C87EA20897FB20037178B /* AppDelegate.m */,
 				458C87EC20897FB20037178B /* ViewController.h */,
 				458C87ED20897FB20037178B /* ViewController.m */,
+				459B2181208ED7D40069A00E /* SaveCtrl.h */,
+				459B2182208ED7D40069A00E /* SaveCtrl.m */,
 				458C87EF20897FB20037178B /* Main.storyboard */,
 				458C87F220897FB30037178B /* Assets.xcassets */,
 				458C87F420897FB30037178B /* LaunchScreen.storyboard */,
@@ -165,10 +180,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				458C87EE20897FB20037178B /* ViewController.m in Sources */,
+				459EC609208F231400F588FC /* NSGIF.m in Sources */,
 				45EB6B132089C71C002BA5F1 /* MyBezierPath.m in Sources */,
 				458C87F920897FB30037178B /* main.m in Sources */,
 				458C87EB20897FB20037178B /* AppDelegate.m in Sources */,
+				459EC606208F224200F588FC /* GifUtils.m in Sources */,
 				45EB6B142089C71C002BA5F1 /* DrawView.m in Sources */,
+				459B2183208ED7D40069A00E /* SaveCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
