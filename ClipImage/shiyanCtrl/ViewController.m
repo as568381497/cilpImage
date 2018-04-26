@@ -12,6 +12,8 @@
 #import "ViewController.h"
 #import "DrawView.h"
 #import "SaveCtrl.h"
+#import "StaticCtrl.h"
+#import "DynamicCtrl.h"
 
 @import CoreImage;
 

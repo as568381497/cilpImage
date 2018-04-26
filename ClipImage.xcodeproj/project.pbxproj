@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4556727920917ACA00501ED4 /* MainCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4556727820917ACA00501ED4 /* MainCtrl.m */; };
+		4556727C20917CE000501ED4 /* ShowImageCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4556727B20917CE000501ED4 /* ShowImageCtrl.m */; };
+		457BCE762090181C00A827FD /* StaticCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 457BCE752090181C00A827FD /* StaticCtrl.m */; };
+		457BCE792090251A00A827FD /* DynamicCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 457BCE782090251A00A827FD /* DynamicCtrl.m */; };
+		457BCE7B20902F2E00A827FD /* 4woso13.gif in Resources */ = {isa = PBXBuildFile; fileRef = 457BCE7A20902F2D00A827FD /* 4woso13.gif */; };
 		458C87EB20897FB20037178B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 458C87EA20897FB20037178B /* AppDelegate.m */; };
 		458C87EE20897FB20037178B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 458C87ED20897FB20037178B /* ViewController.m */; };
 		458C87F120897FB20037178B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458C87EF20897FB20037178B /* Main.storyboard */; };
@@ -19,9 +24,21 @@
 		45EB6B132089C71C002BA5F1 /* MyBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EB6B102089C71C002BA5F1 /* MyBezierPath.m */; };
 		45EB6B142089C71C002BA5F1 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EB6B122089C71C002BA5F1 /* DrawView.m */; };
 		45EB6B172089FCBF002BA5F1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45EB6B162089FCBE002BA5F1 /* CoreImage.framework */; };
+		4A57B0E6FF396B6581AE3B19 /* Pods_ClipImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E945A87FA4671A61012CC0EF /* Pods_ClipImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1080FF273484B52551CAE9FF /* Pods-ClipImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClipImage/Pods-ClipImage.release.xcconfig"; sourceTree = "<group>"; };
+		166BD0C227A39898189347DF /* Pods-ClipImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClipImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClipImage/Pods-ClipImage.debug.xcconfig"; sourceTree = "<group>"; };
+		4556727720917ACA00501ED4 /* MainCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCtrl.h; sourceTree = "<group>"; };
+		4556727820917ACA00501ED4 /* MainCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCtrl.m; sourceTree = "<group>"; };
+		4556727A20917CE000501ED4 /* ShowImageCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowImageCtrl.h; sourceTree = "<group>"; };
+		4556727B20917CE000501ED4 /* ShowImageCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowImageCtrl.m; sourceTree = "<group>"; };
+		457BCE742090181C00A827FD /* StaticCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticCtrl.h; sourceTree = "<group>"; };
+		457BCE752090181C00A827FD /* StaticCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticCtrl.m; sourceTree = "<group>"; };
+		457BCE772090251A00A827FD /* DynamicCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicCtrl.h; sourceTree = "<group>"; };
+		457BCE782090251A00A827FD /* DynamicCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCtrl.m; sourceTree = "<group>"; };
+		457BCE7A20902F2D00A827FD /* 4woso13.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 4woso13.gif; sourceTree = "<group>"; };
 		458C87E620897FB20037178B /* ClipImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458C87E920897FB20037178B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		458C87EA20897FB20037178B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,6 +60,7 @@
 		45EB6B112089C71C002BA5F1 /* MyBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBezierPath.h; sourceTree = "<group>"; };
 		45EB6B122089C71C002BA5F1 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		45EB6B162089FCBE002BA5F1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		E945A87FA4671A61012CC0EF /* Pods_ClipImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClipImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,18 +69,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				45EB6B172089FCBF002BA5F1 /* CoreImage.framework in Frameworks */,
+				4A57B0E6FF396B6581AE3B19 /* Pods_ClipImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45567274209179ED00501ED4 /* shiyanCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				458C87EC20897FB20037178B /* ViewController.h */,
+				458C87ED20897FB20037178B /* ViewController.m */,
+				459B2181208ED7D40069A00E /* SaveCtrl.h */,
+				459B2182208ED7D40069A00E /* SaveCtrl.m */,
+				457BCE742090181C00A827FD /* StaticCtrl.h */,
+				457BCE752090181C00A827FD /* StaticCtrl.m */,
+				457BCE772090251A00A827FD /* DynamicCtrl.h */,
+				457BCE782090251A00A827FD /* DynamicCtrl.m */,
+			);
+			path = shiyanCtrl;
+			sourceTree = "<group>";
+		};
+		4556727520917A0000501ED4 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				459EC608208F231400F588FC /* NSGIF.h */,
+				459EC607208F231400F588FC /* NSGIF.m */,
+				459EC604208F224200F588FC /* GifUtils.h */,
+				459EC605208F224200F588FC /* GifUtils.m */,
+				45EB6B0F2089C71C002BA5F1 /* DrawView.h */,
+				45EB6B122089C71C002BA5F1 /* DrawView.m */,
+				45EB6B112089C71C002BA5F1 /* MyBezierPath.h */,
+				45EB6B102089C71C002BA5F1 /* MyBezierPath.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		4556727620917A2800501ED4 /* buju */ = {
+			isa = PBXGroup;
+			children = (
+				4556727720917ACA00501ED4 /* MainCtrl.h */,
+				4556727820917ACA00501ED4 /* MainCtrl.m */,
+				4556727A20917CE000501ED4 /* ShowImageCtrl.h */,
+				4556727B20917CE000501ED4 /* ShowImageCtrl.m */,
+			);
+			path = buju;
+			sourceTree = "<group>";
+		};
 		458C87DD20897FB20037178B = {
 			isa = PBXGroup;
 			children = (
 				458C87E820897FB20037178B /* ClipImage */,
 				458C87E720897FB20037178B /* Products */,
 				45EB6B152089FCBE002BA5F1 /* Frameworks */,
+				DF65F7ACB6E77975282366DA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,22 +138,14 @@
 		458C87E820897FB20037178B /* ClipImage */ = {
 			isa = PBXGroup;
 			children = (
-				459EC608208F231400F588FC /* NSGIF.h */,
-				459EC607208F231400F588FC /* NSGIF.m */,
-				459EC604208F224200F588FC /* GifUtils.h */,
-				459EC605208F224200F588FC /* GifUtils.m */,
-				45EB6B0F2089C71C002BA5F1 /* DrawView.h */,
-				45EB6B122089C71C002BA5F1 /* DrawView.m */,
-				45EB6B112089C71C002BA5F1 /* MyBezierPath.h */,
-				45EB6B102089C71C002BA5F1 /* MyBezierPath.m */,
+				4556727620917A2800501ED4 /* buju */,
+				4556727520917A0000501ED4 /* utils */,
+				45567274209179ED00501ED4 /* shiyanCtrl */,
 				458C87E920897FB20037178B /* AppDelegate.h */,
 				458C87EA20897FB20037178B /* AppDelegate.m */,
-				458C87EC20897FB20037178B /* ViewController.h */,
-				458C87ED20897FB20037178B /* ViewController.m */,
-				459B2181208ED7D40069A00E /* SaveCtrl.h */,
-				459B2182208ED7D40069A00E /* SaveCtrl.m */,
 				458C87EF20897FB20037178B /* Main.storyboard */,
 				458C87F220897FB30037178B /* Assets.xcassets */,
+				457BCE7A20902F2D00A827FD /* 4woso13.gif */,
 				458C87F420897FB30037178B /* LaunchScreen.storyboard */,
 				458C87F720897FB30037178B /* Info.plist */,
 				458C87F820897FB30037178B /* main.m */,
@@ -104,8 +157,18 @@
 			isa = PBXGroup;
 			children = (
 				45EB6B162089FCBE002BA5F1 /* CoreImage.framework */,
+				E945A87FA4671A61012CC0EF /* Pods_ClipImage.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF65F7ACB6E77975282366DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				166BD0C227A39898189347DF /* Pods-ClipImage.debug.xcconfig */,
+				1080FF273484B52551CAE9FF /* Pods-ClipImage.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 458C87FC20897FB30037178B /* Build configuration list for PBXNativeTarget "ClipImage" */;
 			buildPhases = (
+				7B85728A5452C4CF4BB7A847 /* [CP] Check Pods Manifest.lock */,
 				458C87E220897FB20037178B /* Sources */,
 				458C87E320897FB20037178B /* Frameworks */,
 				458C87E420897FB20037178B /* Resources */,
+				1892044D3B5FF0C9E2FFA407 /* [CP] Embed Pods Frameworks */,
+				8F2DD5224B93F7BCFE778F5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,10 +235,69 @@
 				458C87F620897FB30037178B /* LaunchScreen.storyboard in Resources */,
 				458C87F320897FB30037178B /* Assets.xcassets in Resources */,
 				458C87F120897FB20037178B /* Main.storyboard in Resources */,
+				457BCE7B20902F2E00A827FD /* 4woso13.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1892044D3B5FF0C9E2FFA407 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ClipImage/Pods-ClipImage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipImage/Pods-ClipImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B85728A5452C4CF4BB7A847 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClipImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F2DD5224B93F7BCFE778F5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClipImage/Pods-ClipImage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		458C87E220897FB20037178B /* Sources */ = {
@@ -180,13 +305,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				458C87EE20897FB20037178B /* ViewController.m in Sources */,
+				4556727920917ACA00501ED4 /* MainCtrl.m in Sources */,
 				459EC609208F231400F588FC /* NSGIF.m in Sources */,
 				45EB6B132089C71C002BA5F1 /* MyBezierPath.m in Sources */,
 				458C87F920897FB30037178B /* main.m in Sources */,
 				458C87EB20897FB20037178B /* AppDelegate.m in Sources */,
 				459EC606208F224200F588FC /* GifUtils.m in Sources */,
+				4556727C20917CE000501ED4 /* ShowImageCtrl.m in Sources */,
 				45EB6B142089C71C002BA5F1 /* DrawView.m in Sources */,
 				459B2183208ED7D40069A00E /* SaveCtrl.m in Sources */,
+				457BCE792090251A00A827FD /* DynamicCtrl.m in Sources */,
+				457BCE762090181C00A827FD /* StaticCtrl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +447,7 @@
 		};
 		458C87FD20897FB30037178B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 166BD0C227A39898189347DF /* Pods-ClipImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +463,7 @@
 		};
 		458C87FE20897FB30037178B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1080FF273484B52551CAE9FF /* Pods-ClipImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
