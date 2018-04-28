@@ -277,6 +277,7 @@
             y = 0;
         }
         [self.imageViews addObject:imageView];
+        imageView.tag = i;
     }
 }
 
@@ -316,6 +317,8 @@
         {
             x = 0;
         }
+        [self.imageViews addObject:imageView];
+        imageView.tag = i;
        
     }
 }
@@ -350,7 +353,7 @@
                 }
                 
                 CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
                 [animation setFromValue:[NSValue valueWithCGPoint:x]];
                 [animation setToValue:[NSValue valueWithCGPoint:y]];
                 animation.duration = 8;//持续时间
@@ -359,7 +362,7 @@
                 [viewLayer addAnimation:animation forKey:nil];
                 
                 CABasicAnimation *animationRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-                [animationRotation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+                [animationRotation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
                 animationRotation.fromValue = [NSNumber numberWithFloat:-M_1_PI*0.1]; // 起始角度
                 animationRotation.toValue = [NSNumber numberWithFloat:M_1_PI*0.1]; // 终止角度
                 animationRotation.duration = 0.1;//持续时间
@@ -396,7 +399,7 @@
                 }
                 
                 CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
                 [animation setFromValue:[NSValue valueWithCGPoint:x]];
                 [animation setToValue:[NSValue valueWithCGPoint:y]];
                 animation.duration = 8;//持续时间
@@ -405,7 +408,7 @@
                 [viewLayer addAnimation:animation forKey:nil];
                 
                 CABasicAnimation *animationRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-                [animationRotation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+                [animationRotation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
                 animationRotation.fromValue = [NSNumber numberWithFloat:-M_1_PI*0.1]; // 起始角度
                 animationRotation.toValue = [NSNumber numberWithFloat:M_1_PI*0.1]; // 终止角度
                 animationRotation.duration = 0.1;//持续时间
@@ -443,7 +446,7 @@
                 }
                 
                 CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
                 [animation setFromValue:[NSValue valueWithCGPoint:x]];
                 [animation setToValue:[NSValue valueWithCGPoint:y]];
                 animation.duration = 8;//持续时间
@@ -452,7 +455,7 @@
                 [viewLayer addAnimation:animation forKey:nil];
                 
                 CABasicAnimation *animationRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-                [animationRotation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+                [animationRotation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
                 animationRotation.fromValue = [NSNumber numberWithFloat:-M_1_PI*0.1]; // 起始角度
                 animationRotation.toValue = [NSNumber numberWithFloat:M_1_PI*0.1]; // 终止角度
                 animationRotation.duration = 0.1;//持续时间
@@ -491,23 +494,13 @@
                 }
                 
                 CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
                 [animation setFromValue:[NSValue valueWithCGPoint:x]];
                 [animation setToValue:[NSValue valueWithCGPoint:y]];
                 animation.duration = 8;//持续时间
                 animation.repeatCount = HUGE_VALF;//抖动次数
                 animation.autoreverses = YES;//反极性
                 [viewLayer addAnimation:animation forKey:nil];
-                
-                CABasicAnimation *animationRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-                [animationRotation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
-                animationRotation.fromValue = [NSNumber numberWithFloat:-M_1_PI*0.1]; // 起始角度
-                animationRotation.toValue = [NSNumber numberWithFloat:M_1_PI*0.1]; // 终止角度
-                animationRotation.duration = 0.1;//持续时间
-                animationRotation.repeatCount = HUGE_VALF;//抖动次数
-                animationRotation.autoreverses = YES;//反极性
-                [viewLayer addAnimation:animationRotation forKey:nil];
-                
                 
             }
             
@@ -539,7 +532,42 @@
                 }
                 
                 CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+                [animation setFromValue:[NSValue valueWithCGPoint:x]];
+                [animation setToValue:[NSValue valueWithCGPoint:y]];
+                animation.duration = 8;//持续时间
+                animation.repeatCount = HUGE_VALF;//抖动次数
+                animation.autoreverses = YES;//反极性
+                [viewLayer addAnimation:animation forKey:nil];
+
+            }
+        }
+            break;
+            
+        case showSix:
+        {
+            for (UIImageView *imageView in self.imageViews)
+            {
+                CALayer *viewLayer = [imageView layer];
+                CGPoint position = viewLayer.position;
+                CGPoint x;
+                CGPoint y;
+                
+                NSInteger i = (imageView.tag)/8;
+                
+                if (i%2 == 0)
+                {
+                    x = CGPointMake(position.x-150, position.y);
+                    y = CGPointMake(position.x+150, position.y);
+                }
+                else
+                {
+                    x = CGPointMake(position.x+150, position.y);
+                    y = CGPointMake(position.x-150, position.y);
+                }
+                
+                CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+                [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
                 [animation setFromValue:[NSValue valueWithCGPoint:x]];
                 [animation setToValue:[NSValue valueWithCGPoint:y]];
                 animation.duration = 8;//持续时间
@@ -547,23 +575,7 @@
                 animation.autoreverses = YES;//反极性
                 [viewLayer addAnimation:animation forKey:nil];
                 
-                CABasicAnimation *animationRotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-                [animationRotation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
-                animationRotation.fromValue = [NSNumber numberWithFloat:-M_1_PI*0.1]; // 起始角度
-                animationRotation.toValue = [NSNumber numberWithFloat:M_1_PI*0.1]; // 终止角度
-                animationRotation.duration = 0.1;//持续时间
-                animationRotation.repeatCount = HUGE_VALF;//抖动次数
-                animationRotation.autoreverses = YES;//反极性
-                [viewLayer addAnimation:animationRotation forKey:nil];
-                
-                
             }
-        }
-            break;
-            
-        case showSix:
-        {
-            
         }
             break;
             
