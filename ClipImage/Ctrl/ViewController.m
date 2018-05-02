@@ -35,7 +35,6 @@
 
 - (IBAction)cilpImage:(UIButton *)sender
 {
-    sender.hidden = YES;
     self.drawView.hidden = YES;
     __weak typeof(self) weakSelf = self;
     [self.drawView selectPathBlock:^(MyBezierPath *path) {
@@ -56,8 +55,27 @@
         
         [[imageView layer]addSublayer:contentLayer];
         weakSelf.path = path;
+        
+        //////////////////////////////////////////////////////////////////
+        NSLog(@"获取的图片是：%@", [weakSelf getImage]);
+        
     }];
     
+}
+
+//返回获取到的图片
+- (UIImage *)getImage
+{
+    NSArray *arr = [self.path points];
+    float width = [self getImageWidth:arr];
+    float height = [self getImageHeight:arr];
+    CGPoint point = [self getImagePoint:arr];
+    CGRect rect = CGRectMake(point.x, point.y, width, height);
+    
+    UIImage *image = [self makeImageWithView:self.imageView withSize:self.view.frame.size];
+    UIImage *imageEnd = [self clipImage:image WithRect:rect];
+    
+    return imageEnd;
 }
 
 
