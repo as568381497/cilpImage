@@ -11,9 +11,6 @@
 
 #import "ViewController.h"
 #import "DrawView.h"
-#import "SaveCtrl.h"
-#import "StaticCtrl.h"
-#import "DynamicCtrl.h"
 
 @import CoreImage;
 
@@ -34,54 +31,32 @@
 {
     [super viewDidLoad];
     
-  
-    
 }
 
 - (IBAction)cilpImage:(UIButton *)sender
 {
-    
-    if (self.imageView)
-    {
-        NSArray *arr = [self.path points];
-        float width = [self getImageWidth:arr];
-        float height = [self getImageHeight:arr];
-        CGPoint point = [self getImagePoint:arr];
-        CGRect rect = CGRectMake(point.x, point.y, width, height);
-
-        UIImage *image = [self makeImageWithView:self.imageView withSize:self.view.frame.size];
-        UIImage *imageEnd = [self clipImage:image WithRect:rect];
+    sender.hidden = YES;
+    self.drawView.hidden = YES;
+    __weak typeof(self) weakSelf = self;
+    [self.drawView selectPathBlock:^(MyBezierPath *path) {
         
-        SaveCtrl *ctel = [STORYBOARD instantiateViewControllerWithIdentifier:NSStringFromClass([SaveCtrl class])];
-        ctel.image = imageEnd;
-        [self showViewController:ctel sender:nil];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        imageView.contentMode = UIViewContentModeScaleToFill;
+        [self.view addSubview:imageView];
+        weakSelf.imageView = imageView;
         
-    }
-    else
-    {
-        self.drawView.hidden = YES;
-        __weak typeof(self) weakSelf = self;
-        [sender setTitle:@"跳转" forState:UIControlStateNormal];
-        [self.drawView selectPathBlock:^(MyBezierPath *path) {
-            
-            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-            imageView.contentMode = UIViewContentModeScaleToFill;
-            [self.view addSubview:imageView];
-            weakSelf.imageView = imageView;
-            
-            CALayer *contentLayer = [CALayer layer];
-            [contentLayer setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-            
-            CAShapeLayer *mask = [CAShapeLayer layer];
-            mask.path = path.CGPath;
-            
-            [contentLayer setContents:(id)[[UIImage imageNamed:@"bg"] CGImage]];
-            [contentLayer setMask:mask];
-            
-            [[imageView layer]addSublayer:contentLayer];
-            weakSelf.path = path;
-        }];
-    }
+        CALayer *contentLayer = [CALayer layer];
+        [contentLayer setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        
+        CAShapeLayer *mask = [CAShapeLayer layer];
+        mask.path = path.CGPath;
+        
+        [contentLayer setContents:(id)[[UIImage imageNamed:@"bg"] CGImage]];
+        [contentLayer setMask:mask];
+        
+        [[imageView layer]addSublayer:contentLayer];
+        weakSelf.path = path;
+    }];
     
 }
 
@@ -98,61 +73,7 @@
     return image;
 }
 
-//生成图片文件
-- (void)clipScreenWithPath:(NSString *)path type:(NSString *)type UIView:(UIView *)view
-
-{
-    
-    //1.开启一个和传进来的View大小一样的位图上下文
-    
-    UIGraphicsBeginImageContextWithOptions(view.bounds.size,NO,0);
-    
-    //2.把控制器的View绘制到上下文当中
-    
-    //想把UIView上面的东西绘制到上下文当中,必须得使用渲染的方式
-    
-    //renderInContext:就是渲染的方式
-    
-    CGContextRef ctx= UIGraphicsGetCurrentContext();
-    
-    [view.layer renderInContext:ctx ];
-    
-    //3从上下文当中生成一张图片
-    
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    //4.关闭上下文
-    
-    UIGraphicsEndImageContext();
-    
-    //5.把生成的图片写入到桌面(以文件的方式进行传输:二进制流NSData,即把图片转为二进制流)
-    
-    NSData *data;
-    
-    if ([type isEqualToString:@"png"]) {
-        
-        //生成PNG格式的图片
-        
-        data = UIImagePNGRepresentation(newImage);
-        NSLog(@"生成成功.png");
-        
-    }
-    
-    else if ([type isEqualToString:@"jpg"]){
-        
-        //5.1把图片转为二进制流(第一个参数是图片,第2个参数是图片压缩质量:1是最原始的质量)
-        
-        data = UIImageJPEGRepresentation(newImage,1);
-        NSLog(@"生成成功.jpg");
-        
-    }
-    
-    [data writeToFile:path atomically:YES];
-    
-}
-
 //裁剪图片
-
 - (UIImage *)clipImage:(UIImage *)viewImage WithRect:(CGRect)rect
 {
 
@@ -167,7 +88,7 @@
     return sendImage;
 }
 
-#pragma mark --
+#pragma mark -- 计算裁剪位置位置
 
 - (float)getImageWidth:(NSArray *)arr
 {

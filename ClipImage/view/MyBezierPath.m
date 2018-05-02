@@ -1,9 +1,9 @@
 //
-//  MyBezierPath.m
-//  画板
+//  ViewController.h
+//  ClipImage
 //
-//  Created by 杭城小刘 on 2018/1/2.
-//  Copyright © 2018年 杭城小刘. All rights reserved.
+//  Created by pathfinder on 2018/4/20.
+//  Copyright © 2018年 pathfinder. All rights reserved.
 //
 
 #import "MyBezierPath.h"

@@ -1,11 +1,9 @@
-
-
 //
-//  DrawView.m
-//  画板
+//  ViewController.h
+//  ClipImage
 //
-//  Created by 杭城小刘 on 2017/12/11.
-//  Copyright © 2017年 杭城小刘. All rights reserved.
+//  Created by pathfinder on 2018/4/20.
+//  Copyright © 2018年 pathfinder. All rights reserved.
 //
 
 #import "DrawView.h"
@@ -126,37 +124,6 @@ static CGPoint midpoint(CGPoint p0, CGPoint p1) {
     [self setNeedsDisplay];
 }
 
-#pragma mark -- public method
-
-//清屏
--(void)clearScreen{
-    [self.paths removeAllObjects];
-    [self setNeedsDisplay];
-    
-}
-
-//撤销
--(void)revoke{
-    [self.paths removeLastObject];
-    [self setNeedsDisplay];
-}
-
-//橡皮擦
--(void)erease{
-    self.lineColor = [UIColor whiteColor];
-}
-
-//设置颜色
--(void)setPenColor:(UIColor *)color{
-    self.lineColor = color;
-    [self setNeedsDisplay];
-}
-
-//设置线条宽度
--(void)setPenWidth:(CGFloat)width{
-    self.lineWidth = width;
-    [self setNeedsDisplay];
-}
 
 #pragma mark -- lazy load
 
